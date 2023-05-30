@@ -28,14 +28,15 @@ resultado final.
 Área rectángulo: base * altura / Perímetro rectángulo: (base + altura) * 2.*/
         
         Circulo circulo = new Circulo(3);
-        System.out.println("El area es " + circulo.area());
+        Rectangulo rectangulo = new Rectangulo(5, 5);
+        /*System.out.println("El area es " + circulo.area());
         System.out.println("El perimetro es " + circulo.perimetro());
         
-        Rectangulo rectangulo = new Rectangulo(5, 5);
+        
         System.out.println("El area es " + rectangulo.area());
-        System.out.println("El perimetro es " + rectangulo.perimetro());
+        System.out.println("El perimetro es " + rectangulo.perimetro());*/
         
-        
+        System.out.println("El area es " + circulo);
         
         
     }

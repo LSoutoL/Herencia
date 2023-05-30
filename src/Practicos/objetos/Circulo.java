@@ -15,7 +15,7 @@ public class Circulo implements Formas {
         this.radio = radio;
     }
 
-    //Área circulo: PI * radio ^ 2 / Perímetro circulo: PI * diámetro.
+  
     @Override
     public Double area() {
         return PI*(Math.pow(radio, 2));

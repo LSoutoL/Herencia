@@ -11,7 +11,12 @@ package Practicos.objetos;
 public interface Formas {
     final Double PI=3.14159265359;
     
-    public Double area();
+    //static Double areaCirculo(double radio){return PI*(Math.pow(radio, 2));}
+    //static Double perimetroCirculo(double radio){return PI*(radio*2);}
+    //static Double areaRectangulo(double base, double altura){return base*altura;}
+    //static Double perimetroRectangulo(double base, double altura){return (base+altura)*2;}
     
-    public Double perimetro();
+    Double area();
+    
+    Double perimetro();
 }
