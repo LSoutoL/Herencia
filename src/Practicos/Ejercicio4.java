@@ -5,6 +5,7 @@
 package Practicos;
 
 import Practicos.objetos.Circulo;
+import Practicos.objetos.Formas;
 import Practicos.objetos.Rectangulo;
 
 /**
@@ -29,14 +30,12 @@ resultado final.
         
         Circulo circulo = new Circulo(3);
         Rectangulo rectangulo = new Rectangulo(5, 5);
-        /*System.out.println("El area es " + circulo.area());
-        System.out.println("El perimetro es " + circulo.perimetro());
-        
-        
+                
         System.out.println("El area es " + rectangulo.area());
-        System.out.println("El perimetro es " + rectangulo.perimetro());*/
+        System.out.println("El perimetro es " + rectangulo.perimetro());
         
-        System.out.println("El area es " + circulo);
+        System.out.println("El area es " + Formas.areaCirculo(circulo.getRadio()));
+        System.out.println("El perimetro es " + Formas.perimetroCirculo(circulo.getRadio()));
         
         
     }

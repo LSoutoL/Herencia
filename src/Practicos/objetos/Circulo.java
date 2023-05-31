@@ -15,7 +15,14 @@ public class Circulo implements Formas {
         this.radio = radio;
     }
 
-  
+    public double getRadio() {
+        return radio;
+    }
+
+    public void setRadio(double radio) {
+        this.radio = radio;
+    }
+
     @Override
     public Double area() {
         return PI*(Math.pow(radio, 2));
