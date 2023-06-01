@@ -10,6 +10,8 @@ import Extras.objetos.Bote;
 import Extras.objetos.Lujo;
 import Extras.objetos.Velero;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 /**
@@ -18,11 +20,13 @@ import java.util.Scanner;
  */
 public class AlquilerService {
     private Scanner leer;
+    private HashMap<Integer, Alquiler> alquileres;
 
     public AlquilerService() {
         this.leer=new Scanner(System.in).useDelimiter("\n");
+        this.alquileres=new HashMap<>();
     }
-    
+
     public Bote cargarBote(){
         System.out.println("Ahora debe ingresar los datos basicos de la embarcacion.");
         System.out.println("Matricula de la embarcacion:");
@@ -71,5 +75,21 @@ public class AlquilerService {
         Date devolucion = new Date(leer.nextInt(),leer.nextInt(),leer.nextInt());
         Bote ocupa = cargarBote();
         return new Alquiler(nombre, DNI, alquiler, devolucion, ocupa);
+    }
+    public HashMap<Integer, Alquiler> cargarEnMapa(){
+        String opcion;
+        do{
+        Alquiler alquiler = cargarAlquiler();
+        Integer posicion = (int) Math.random()*10;
+        while (alquileres.containsKey(posicion)){
+            posicion=(int) Math.random()*10;
+        }
+        alquiler.setPosicion(posicion);
+        System.out.println("Su embarcacion ocupara la posicion de amarre " + posicion);
+        alquileres.put(posicion, alquiler);
+        System.out.println("Desea agregar otro alquiler? (s/n)");
+        opcion=leer.next();
+        } while (opcion.equalsIgnoreCase("s"));
+        return alquileres;
     }
 }

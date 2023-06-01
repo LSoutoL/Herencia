@@ -29,7 +29,6 @@ public class Alquiler {
         this.DNI = DNI;
         this.alquiler = alquiler;
         this.devolucion = devolucion;
-        this.posicion = (int) Math.random()*10;
         this.ocupa = ocupa;
     }
 
